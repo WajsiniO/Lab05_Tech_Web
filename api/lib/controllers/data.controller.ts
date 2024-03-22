@@ -1,5 +1,6 @@
 import Controller from "interfaces/controller.interface";
 import { Request, Response, NextFunction, Router } from "express";
+import path = require("path");
 
 let testArr =
 [4,5,6,3,5,3,7,5,13,5,6,4,3,6,3,6];

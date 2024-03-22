@@ -4,7 +4,7 @@ import path from 'path';
 import exp from "constants";
 
 class IndexController implements Controller {
-    public path = '/';
+    public path = '/*';
     public router = Router();
 
     constructor() {
