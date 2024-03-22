@@ -37,10 +37,11 @@ class DataController implements Controller {
     }
 
     private addData = async (request: Request, response: Response, next: NextFunction) => {
+        const { elem } = request.body; 
         const { id } = request.params;
-        testArr.push(Number(id));
+        testArr.push(Number(elem));
 
-        response.status(200).json(`Dodano ${id}`);
+        response.status(200).json(`Dodano ${elem}`);
     }
 
     private getData = async (request: Request, response: Response, next: NextFunction) => {
