@@ -22,14 +22,14 @@ public async query(deviceID: string) {
     }
  }
 
- public async get(deviceID: IData, limit: number){
+ /*public async get(deviceID: IData, limit: number){
     try {
         const getData = DataModel.find({deviceId: deviceID}, {__v: 0, __id: 0}).limit(limit).sort({$natural:-1});
         return getData;
     } catch (error){
         throw new Error(`Couldn't find data`);
     }
- }
+ }*/
 
  /*public async getAllDevices(){
     await Promise.all(
@@ -52,6 +52,7 @@ public async query(deviceID: string) {
  }
 
 */
+/*
 public async deleteData(id: string){
     try {
         await DataModel.deleteMany({deviceId: id});
@@ -59,6 +60,6 @@ public async deleteData(id: string){
         throw new Error(`Couldn't delete data`);
     }
 }
-
+*/
  }
  

@@ -22,9 +22,12 @@ class DataController implements Controller {
         this.router.get(`${this.path}/latest`,
         this.getLatestReadingsFromAllDevices);
         
-        this.router.post(`${this.path}/:id`, checkIdParam,this.addData);
+        this.router.get(`${this.path}/getDeviceData`,
+        this.getAllDeviceData);
+
+        this.router.post(`${this.path}/:id`, checkIdParam, this.addData);
         
-        this.router.get(`${this.path}/:id`, checkIdParam,this.getData);
+       // this.router.get(`${this.path}/:id`, checkIdParam,this.getData);
 
         this.router.get(`${this.path}/:id/latest`, checkIdParam,this.getLatestData);
 
@@ -70,7 +73,7 @@ class DataController implements Controller {
      
      
 
-    private getData = async (request: Request, response: Response, next: NextFunction) => {
+   /* private getData = async (request: Request, response: Response, next: NextFunction) => {
         const { air } = request.body;
         const { id } = request.params;
      
@@ -90,7 +93,7 @@ class DataController implements Controller {
         }
 
     }
-
+*/
     private getLatestData = async (request: Request, response: Response, next: NextFunction) => {
         const {id} = request.params;
         const data = testArr;
