@@ -5,7 +5,6 @@ import DataController from './controllers/data.controller';
 const app: App = new App([
     new DataController(),
     new IndexController()
-    
 ]);
 
 app.listen();
